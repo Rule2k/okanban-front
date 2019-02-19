@@ -1,0 +1,12 @@
+.box {
+    padding: 0.625rem;
+    cursor: move;
+}
+
+.box:not(:last-child) {
+    margin-bottom: 0.5rem;
+}
+
+#lists {
+    overflow: auto;
+}

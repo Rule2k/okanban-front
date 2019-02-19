@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>oKanban</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+    <!-- jQuery UI -->
+    <link rel="stylesheet" href="./css/jquery-ui.structure.min.css">
+    <link rel="stylesheet" href="./css/jquery-ui.min.css">
+    <!-- Nos styles -->
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
+</head>
+
+<body>
+    <section class="section ">
+        <div class="container">
+            <h1 class="title">
+                oKanban
+            </h1>
+            <div class="columns" id="lists">
+
+            </div>
+        </div>
+    </section>
+
+    <div class="modal" id="addListModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <form action="" method="POST">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Ajouter une liste</p>
+                    <button class="delete close" type="button" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label class="label">Nom</label>
+                        <div class="control">
+                            <input type="text" class="input" name="list-name" value="" placeholder="Nom de la liste">
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Enregistrer</button>
+                    <button class="button close" type="button">Annuler</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="addCardModal">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <form action="" method="POST">
+                <header class="modal-card-head">
+                    <p class="modal-card-title">Ajouter un post-it</p>
+                    <button class="delete close" type="button" aria-label="close"></button>
+                </header>
+                <section class="modal-card-body">
+                    <div class="field">
+                        <label class="label">Titre</label>
+                        <div class="control">
+                            <input type="text" class="input" name="cardName" value="" placeholder="Titre du post-it" autocomplete="off">
+                        </div>
+                    </div>
+                </section>
+                <footer class="modal-card-foot">
+                    <button class="button is-success">Enregistrer</button>
+                    <button class="button close" type="button">Annuler</button>
+                </footer>
+            </form>
+        </div>
+    </div>
+
+    <!-- card -->
+    <div class="box is-hidden" id="cardModel">
+        <div class="columns">
+            <div class="column card-title">
+                
+            </div>
+            <div class="column is-narrow">
+                <a href="#">
+                    <span class="icon is-small has-text-primary">
+                        <i class="fas fa-pencil-alt"></i>
+                    </span>
+                </a>
+                <a href="#">
+                    <span class="icon is-small has-text-danger">
+                        <i class="fas fa-trash-alt"></i>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <!--/ card -->
+
+    <!-- chargement de jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <!-- Chargement de mon fichier JS -->
+    <script src="./js/app.js"></script>
+    <script src="./js/jquery-ui.min.js"></script>
+    <!-- <script src="./js/lists.js"></script> -->
+    <!-- <script src="./js/cards.js"></script> -->
+</body>
+
+</html>

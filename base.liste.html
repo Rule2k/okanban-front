@@ -1,0 +1,69 @@
+
+<!DOCTYPE html>
+<div class="column is-one-quarter panel">
+  <div class="panel-heading has-background-info">
+      <div class="columns">
+          <div class="column">
+              <h2 class="has-text-white">Perso</h2>
+
+              <form action="" method="POST" class="is-hidden">
+                  <input type="hidden" name="list-id" value="1">
+                  <div class="field has-addons">
+                      <div class="control">
+                          <input type="text" class="input is-small" name="list-name" value="" placeholder="Nom de la liste">
+                      </div>
+                      <div class="control">
+                          <button class="button is-small is-success">Valider</button>
+                      </div>
+                  </div>
+              </form>
+          </div>
+
+          <div class="column is-narrow">
+              <a href="#" class="is-pulled-right">
+                  <span class="icon is-small has-text-white">
+                      <i class="fas fa-plus"></i>
+                  </span>
+              </a>
+          </div>
+      </div>
+  </div>
+  <div class="panel-block is-block has-background-light">
+      <!-- card -->
+      
+      <!--/ card -->
+  </div>
+  </div>
+
+<!-- SAVE JS -->
+
+console.log('generateListElement');
+    var $div1 = $('<div>').addClass('column is-one-quarter panel');
+    var $div2 = $('<div>').addClass('panel-heading has-background-info');
+    var $div3 = $('<div>').addClass('columns');
+    var $div4 = $('<div>').addClass('columns');
+    var $h2 = $('<h2>').addClass('has-text-white').html(listName);
+    var $form = $('<form>').addClass('is-hidden').attr('method', 'POST');
+    var $input = $('<input>').attr('type', 'hidden').attr('name', 'list-id').attr('value', '1');
+    var $div5 = $('<div>').addClass('field has-addons');
+    var $div6 = $('<div>').addClass('control');
+    var $div7 = $('<div>').addClass('control');
+    var $input2 = $('<input>').attr('type', 'text').attr('name', 'list-name').attr('value', '').attr('placeholder', 'Nom de la liste').addClass('input is-small');
+    var $button = $('<button>').addClass('button is-small is-success').html('Valider');
+    var $div8 = $('<div>').addClass('column is-narrow');
+    var $link = $('<a>').addClass('is-pulled-right').attr('href', '#');
+    var $span = $('<span>').addClass('icon is-small has-text-white');
+    var $icon = $('<i>').addClass('fas fa-plus');
+    var $div9 = $('<div>').addClass('panel-block is-block has-background-light');
+
+    $div1.append($div2, $div9);
+    $div2.append($div3);
+    $div3.append($div4, $div8);
+    $div4.append($h2, $form);
+    $form.append($input, $div5);
+    $div5.append($div6, $div7);
+    $div6.append($input2);
+    $div7.append($button);
+    $div8.append($link);
+    $link.append($span);
+    $span.append($icon);
